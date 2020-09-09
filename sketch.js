@@ -6,6 +6,7 @@ const Constraint = Matter.Constraint;
 
 var engine, world;
 var box,ground,bar1,bar2,bar3,barImage,slingshot;
+var GameState = "onSling";
 
 function setup(){
     var canvas = createCanvas(1536,700);
@@ -95,12 +96,14 @@ function draw(){
 }
 
 function mouseDragged(){
+if (GameState !== "launched"){
     Matter.Body.setPosition(box.body, {x: mouseX , y: mouseY});
 }
-
+}
 
 function mouseReleased(){
     slingshot.fly();
+    GameState = "launched";
 }
 
 function keyPressed(){
