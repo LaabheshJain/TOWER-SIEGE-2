@@ -114,7 +114,7 @@ function keyPressed(){
 		GameState = "onSling";
   }
   
-  if(keycode === space){
+  if(keyCode === space){
     box.x=200;
     box.y=200;
   }
