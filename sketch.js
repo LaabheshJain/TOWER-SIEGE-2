@@ -111,6 +111,7 @@ function keyPressed(){
 	{
 		Matter.Body.setPosition(box.body,{x:235, y:420})
 		slingshot.attach(box.body);
+		GameState = "onSling";
   }
   
   if(keycode === space){
